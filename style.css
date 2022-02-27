@@ -1,0 +1,417 @@
+a {
+    text-decoration: none;
+}
+
+span {
+    display: inline-block;
+}
+
+#wrap {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 img {
+    width: 550px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*見出し*/
+#wrap #h2-works {
+    position: relative;
+    padding: 50px 0 60px 0;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+}/*ここまで見出し*/
+
+/*works下線*/
+#wrap #h2-works:after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    margin: 10px 0 0 -15px;
+    border-bottom: 2px solid #000;
+    content: "";
+}
+ /*ここまで下線*/
+
+ #title {
+     text-align: left;
+     font-size: 1.3em;
+     font-weight: 700;
+ }
+
+ .text {
+     font-size: 10px;
+     text-align: left;
+ }
+
+ #h2-1 {
+    position: fixed;
+    font-size: 1.05em;
+    font-weight: bold;
+    bottom: 740px;
+    right: 35px;
+    letter-spacing: 0.1em;
+}
+
+#h2-2 {
+    position: fixed;
+    font-size: 1.05em;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    bottom: 620px;
+    right: 26px;
+    letter-spacing: 0.2em;
+    z-index: 10;
+}
+
+.left {
+    float: left;
+    width: 40%;
+    height: 220px;
+}
+
+dl {
+    text-align: left;
+}
+
+.left dl dt {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.left dl dd {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.right {
+    float: left;
+    width: 60%;
+    height: auto;
+}
+
+.right dl dt {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.right dl dd {
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+.left2 {
+    width: 35%;
+    float: left;
+    margin-top: 30px;
+}
+
+.left2 img {
+    width: 100%;
+}
+
+#center {
+    float: left;
+    width: 5%;
+    height: 200px;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.right2 {
+    width: 60%;
+    text-align: left;
+    float: left;
+    margin-top: 30px;
+}
+
+.right2 p {
+    font-size: 14px;
+
+}
+
+.anm-btn {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background: #333;
+    padding: 15px 27px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    transition: .3s;
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+  .anm-btn:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 3px solid #333;
+    border-radius: 6px;
+    box-sizing: border-box;
+    z-index: -1;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform ease .3s, opacity .3s;
+  }
+  .anm-btn:hover {
+    color: #333;
+    background: transparent;
+  }
+  .anm-btn:hover::before {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  /* チェックボックスを非表示にする */
+.drawer_hidden {
+    display: none;
+  }
+  
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50px;
+    top: 45px;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+  }
+  
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 40px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
+  
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 11px;
+  }
+  
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 11px;
+  }
+  
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+  
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+    
+/* メニューのデザイン*/
+.nav_content {
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    right: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: rgba(110, 110, 110, 0.7);
+    transition: .5s;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  
+  /* メニュー黒ポチを消す */
+  .nav_list {
+    list-style: none;
+    margin-top: 60px;
+  }
+
+  .nav_item {
+      margin-top: 20px;
+  }
+  
+  .nav_item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+    right: 70%;
+  }
+
+  @media screen and (max-width: 480px) {
+      
+    #wrap {
+        width: 85%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    h1 img {
+        width: 300px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    #h2-1 {
+        position: fixed;
+        font-size: 0.9em;
+        font-weight: bold;
+        top: 15px;
+        right: 5%;
+        letter-spacing: 0.1em;
+    }
+
+    #h2-2 {
+        position: fixed;
+        font-size: 0.9em;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        top: 35px;
+        right: 4%;
+        letter-spacing: 0.2em;
+        z-index: 10;
+    }
+
+    #title {
+        text-align: left;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+   
+    .text {
+        font-size: 8px;
+        text-align: left;
+    }
+
+    .left {
+        float: none;
+        width: 100%;
+        height: 220px;
+        margin-bottom: 30px;
+    }
+
+    dl {
+        text-align: center;
+    }
+
+    .right {
+        float: none;
+        width: 100%;
+        height: 220px;
+    }
+    
+    .right dl dt {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .right dl .-- {
+        text-align: center;
+    }
+    
+    .right dl dd {
+        font-size: 14px;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .left2 {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    
+    .left2 img {
+        width: 250px;
+    }
+    
+    #center {
+        display: none;
+    }
+    
+    .right2 {
+        width: 100%;
+        text-align: left;
+        float: left;
+        margin-top: 30px;
+    }
+    
+    .right2 p {
+        font-size: 14px;
+    
+    }
+
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 3px;
+        background: #333;
+        transition: 0.5s;
+        position: absolute;
+    }
+
+    .drawer_open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        left: 10%;
+        top: 45px;
+        z-index: 100;/* 重なり順を一番上にする */
+        cursor: pointer;
+      }
+    
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+        bottom: 10px;
+    }
+    
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+        top: 10px;
+    }
+
+    .nav_item a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+      }
+
+      .nav_list {
+        list-style: none;
+        margin-top: 60px;
+      }
+  }
